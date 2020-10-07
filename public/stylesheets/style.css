@@ -1,0 +1,114 @@
+
+body {
+  --primary: #2a4f03;
+  --secondary: #dfd88d;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  background: white;
+  color: var(--primary);
+}
+
+#page {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 2px auto;
+  padding: 0px;
+}
+
+#pageHeader {
+  flex: 1 100%;
+  padding: 2px;
+  margin: 1px;
+  text-align: center;
+  color: white;
+  background-color: var(--primary);
+}
+
+#pageNav {
+  flex: 1 100%;
+  padding: 2px;
+  margin: 1px;
+  text-align: center;
+  border-bottom: 1px solid var(--secondary);
+  border-right: 0px;
+}
+
+#pageMain {
+  flex: 1 100%;
+  padding: 2px;
+  margin: 1px;
+  padding: 0px 10px;
+  text-align: left;
+}
+
+#pageFooter {
+  flex: 1 100%;
+  padding: 2px;
+  margin: 1px;
+  font-size: small;
+  padding: 3px 0;
+  text-align: center;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+#pageHeader h1 {
+  margin: 8px;
+}
+
+#pageHeader .login {
+  float: right;
+  color: white;
+}
+
+#pageHeader a {
+  color: white;
+}
+
+#pageNav a {
+  margin: 0px 5px;
+}
+
+a {
+  color: var(--primary);
+}
+
+a.button {
+  display: inline-block;
+  font-size: x-small;
+  text-decoration: none;
+  padding: 1px 4px;
+  margin: 2px;
+  background: #f5f5f5;
+  color: black;
+  border-radius: 4px;
+  border: solid 1px lightgray;
+}
+
+a.button:hover {
+  background: lightgray;
+}
+
+.attachment {
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+}
+
+.wideRow {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: stretch;
+}
+
+.wideRow .itemNarrow {
+  flex: 0 auto;
+  margin: 0px 5px;
+}
+
+.wideRow .itemWide {
+  flex: 1 auto;
+  margin: 0px 5px;
+}

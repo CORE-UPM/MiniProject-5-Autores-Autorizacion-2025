@@ -1,0 +1,16 @@
+
+#pageNav {
+    flex: 0 auto;
+    border-right: 1px solid var(--secondary);
+    border-bottom: 0px;
+}
+
+#pageNav a {
+    display: block;
+    text-align: left;
+}
+
+#pageMain {
+    flex: 1;
+    overflow: auto;
+}
