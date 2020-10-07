@@ -1,0 +1,16 @@
+
+#appNav {
+    flex: 0 auto;
+    border-right: 1px solid var(--secondary);
+    border-bottom: 0px;
+}
+
+#appNav a {
+    display: block;
+    text-align: left;
+}
+
+#appMain {
+    flex: 1;
+    overflow: auto;
+}
