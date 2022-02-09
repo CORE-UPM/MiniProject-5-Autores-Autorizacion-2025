@@ -73,7 +73,7 @@ a {
   color: var(--primary);
 }
 
-a.button {
+a.button, input.button {
   display: inline-block;
   font-size: x-small;
   text-decoration: none;
@@ -85,7 +85,7 @@ a.button {
   border: solid 1px lightgray;
 }
 
-a.button:hover {
+a.button:hover, input.button:hover {
   background: lightgray;
 }
 
