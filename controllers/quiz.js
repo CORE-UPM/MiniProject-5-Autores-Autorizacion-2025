@@ -8,7 +8,8 @@ exports.load = async (req, res, next, quizId) => {
     try {
         const quiz = await models.Quiz.findByPk(quizId, {
             include: [
-                {model: models.Attachment, as: 'attachment'}
+                {model: models.Attachment, as: 'attachment'},
+                {model: models.User, as: 'author'}
             ]
         });
         if (quiz) {
@@ -28,7 +29,8 @@ exports.index = async (req, res, next) => {
     try {
         const findOptions = {
             include: [
-                {model: models.Attachment, as: 'attachment'}
+                {model: models.Attachment, as: 'attachment'},
+                {model: models.User, as: 'author'}
             ]
         };
         const quizzes = await models.Quiz.findAll(findOptions);
@@ -64,14 +66,16 @@ exports.create = async (req, res, next) => {
 
     const {question, answer} = req.body;
 
+    const authorId = req.session.loginUser?.id;
+
     let quiz;
     try {
         quiz = models.Quiz.build({
             question,
-            answer
+            answer,
+            authorId
         });
 
-        // Saves only the fields question and answer into the DDBB
         quiz = await quiz.save();
         console.log('Success: Quiz created successfully.');
 
@@ -123,7 +127,7 @@ exports.update = async (req, res, next) => {
     quiz.answer = req.body.answer;
 
     try {
-        await quiz.save({fields: ["question", "answer"]});
+        await quiz.save();
         console.log('Success: Quiz edited successfully.');
 
         try {
