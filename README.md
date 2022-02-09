@@ -1,2 +1,2 @@
-# Mini Project - Skeleton - 2025
+# Mini Project - Autores - 2025
 CORE IWEB
