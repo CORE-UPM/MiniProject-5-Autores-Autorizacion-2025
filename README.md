@@ -1,2 +1,2 @@
-# Mini Project - Autores - 2025
+# Mini Project - Autores y Autorización - 2025
 CORE IWEB
